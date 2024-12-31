@@ -19,10 +19,11 @@ public static class BootPatches {
     [HarmonyPrefix]
     [HarmonyPatch(nameof(Boot.BootOS))]
     public static void BootOSPrefix() {
-        SingletonMonoBehaviour<Settings>.Instance.ChangeLanguage(LanguageType.EN);
-        SingletonMonoBehaviour<Settings>.Instance.Save();
-
-        Plugin.Logger.LogInfo("Pengaturan bahasa diubah paksa ke Bahasa Indonesia");
+        if (SingletonMonoBehaviour<Settings>.Instance.CurrentLanguage.Value != LanguageType.EN) {
+            SingletonMonoBehaviour<Settings>.Instance.ChangeLanguage(LanguageType.EN);
+            SingletonMonoBehaviour<Settings>.Instance.Save();
+            Plugin.Logger.LogInfo("Pengaturan bahasa diubah paksa ke Bahasa Indonesia");
+        }
     }
 
     [HarmonyPrefix]
