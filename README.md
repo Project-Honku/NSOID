@@ -1,7 +1,5 @@
-<div style="text-align: center">
 <img src="https://cdn2.steamgriddb.com/logo/bde22d46cf57de6ee56d3b422af44173.png" align="center">
 <h2 align="center">Needy Streamer Overload Bahasa Indonesia</h2>
-</div>
 
 - Penerjemah: Aozora
 - Pengembang Plugin: Aozora
