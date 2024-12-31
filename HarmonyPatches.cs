@@ -84,10 +84,14 @@ public static class BootPatches {
 
 [HarmonyPatch(typeof(ControllPanelView))]
 public static class ControllPanelViewPatches {
-    [HarmonyPrefix]
+    [HarmonyPostfix]
     [HarmonyPatch(nameof(ControllPanelView.Start))]
-    public static void StartPrefix(ToggleGroup ____languageToggleGroup, TMP_Text ____languageTitle) {
-        ____languageTitle.gameObject.SetActive(false);
-        ____languageToggleGroup.gameObject.SetActive(false);
+    public static void StartPostfix(ToggleGroup ____languageToggleGroup, Toggle ____en) {
+        foreach (Transform child in ____languageToggleGroup.transform) {
+            child.gameObject.SetActive(false);
+        }
+
+        ____en.gameObject.GetComponentInChildren<TMP_Text>().text = "Indonesia";
+        ____en.gameObject.SetActive(true);
     }
 }

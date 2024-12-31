@@ -13,6 +13,7 @@
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
     <RootNamespace>NSOID</RootNamespace>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -63,4 +64,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Assets\Master\*.json" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir -p ~/.steam/steam/steamapps/common/'NEEDY GIRL OVERDOSE'/BepInEx/plugins/$(TargetName)" />
+    <Exec Command="cp -f '$(TargetPath)' ~/.steam/steam/steamapps/common/'NEEDY GIRL OVERDOSE'/BepInEx/plugins/$(TargetName)" />
+  </Target>
 </Project>
