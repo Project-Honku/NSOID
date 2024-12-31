@@ -96,3 +96,12 @@ public static class ControllPanelViewPatches {
         ____en.gameObject.SetActive(true);
     }
 }
+
+[HarmonyPatch(typeof(NgoEx))]
+public static class NgoExPatches {
+    [HarmonyPostfix]
+    [HarmonyPatch(nameof(NgoEx.DayText))]
+    public static void DayTextPostfix(ref string __result, int index, LanguageType lang, bool isLive = false) {
+        __result = $"{NgoEx.SystemTextFromType(isLive ? SystemTextType.Day_Live : SystemTextType.Day, lang)}-{index}";
+    }
+}
