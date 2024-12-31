@@ -2,12 +2,12 @@
 <img src="https://cdn2.steamgriddb.com/logo/bde22d46cf57de6ee56d3b422af44173.png">
 </p>
 
-<h2 align="center">Needy Streamer Overload Bahasa Indonesia</h2>
+<h1 align="center">Needy Streamer Overload Bahasa Indonesia</h1>
 
 - Penerjemah: Aozora
 - Pengembang Plugin: Aozora
 
-### Penginstalan
+## Penginstalan
 1. (Tentu saja) Unduh gamenya di [Steam](https://store.steampowered.com/app/1451940/NEEDY_STREAMER_OVERLOAD/).
 2. Unduh Pre-configured BepInEx Framework [disini](https://drive.google.com/file/d/1QNleDMYKVCpZFJRZJJ7i2fvXAARTIlsx/view?usp=sharing).
 3. Ekstrak BepInEx Framework kedalam folder gamenya (.\Steam\steamapps\common\NEEDY GIRL OVERDOSE).
@@ -15,5 +15,5 @@
 5. Ekstrak patch kedalam folder plugins BepInEx (.\Steam\steamapps\common\NEEDY GIRL OVERDOSE\BepInEx\plugins).
 6. Jalankan gamenya. Jika sebuah konsol muncul, berarti patch berjalan dengan baik.
 
-### Terima kasih
+## Terima kasih
 - [AlternativeAscension](https://github.com/Indeterminance/AlternativeAscension) untuk referensi kode pluginnya.
